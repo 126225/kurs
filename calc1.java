@@ -226,3 +226,165 @@ Color button = new Color(255, 229, 180);									// присвоение переменной button
                 comboBox.setEnabled(false);									// перевод объекта comboBox в недоступное состояние (для нажатия) методом setEnabled
                 text1.setEnabled(false);									// перевод объекта text1 в недоступное состояние (для нажатия) методом setEnabled
                }															// конец выполнения действий оператора try
+               catch ( NumberFormatException error ) {						// перехват исключения оператором catch
+                   result.setText("Проверьте введённые данные"); 			// вывод текста "Проверьте введённые данные" в поле  result, через метод setText
+                   result.setForeground(Color.RED);						// установка цвета текста Jlabel result
+             }																// конец выполнения действий при перехвате исключения оператором catch
+            }																// конец метода actionPerformed    
+        };																	// конец работы слушателя bnds1
+           final ActionListener bnds2 = new ActionListener() {				// объявление слушателя bnds2 (обработку события нажатия на кнопку)
+           @Override														// добавление аннотации Override
+            public void actionPerformed(ActionEvent calc) {				// объявление метода actionPerformed	
+                try {														// объявление оператора try (попытка выполнить действия)
+                   double cost3 = Double.parseDouble(text1.getText());		// определение типа(Double) переменной(cost3) методом parseDouble,присваиваение переменной cost3 введенного значения из text1
+                   double nds3 = 0;										// определение типа переменной(nds3), присваиваение nds3 значение выражения
+                   double summas3 = cost3 + nds3;							// определение типа переменной(summas3), присваиваение summas3 значение выражения
+                   double summabez3 = cost3; 								// определение типа переменной(summabez3), присваиваение summabez3 значение выражения
+                   NumberFormat na = NumberFormat.getInstance();			// присвоение класса NumberFormat переменной na методом getInstance
+                   na.setMaximumFractionDigits(2);  						// ограничение количества цифр после запятой до 2-ух
+                   text2.setText(""+na.format(summas3));					// вывод значения summas3 в поле text2, используя метод setText и ограничение количества цифр после запятой методом format
+                   text3.setText(""+na.format(summabez3));					// вывод значения summabez3 в поле text3, используя метод setText и ограничение количества цифр после запятой методом format
+                   text4.setText(""+na.format(nds3));						// вывод значения nds3 в поле text4, используя метод setText и ограничение количества цифр после запятой методом format
+                   result.setText("");										// вывод текста "" в поле  result, используя метод setText
+                   log11.setVisible(false);								// задаем значение свойства отображения объекта log11 = невидимый
+                   log1.setVisible(false); 								// задаем значение свойства отображения объекта log1 = невидимый
+                   log2.setVisible(false); 								// задаем значение свойства отображения объекта log2 = невидимый
+                   log3.setVisible(false); 								// задаем значение свойства отображения объекта log3 = невидимый
+                   log4.setVisible(false); 								// задаем значение свойства отображения объекта log4 = невидимый
+                   log5.setVisible(false); 								// задаем значение свойства отображения объекта log5 = невидимый
+                   text1.setVisible(false); 								// задаем значение свойства отображения объекта text1 = невидимый
+                   comboBox.setVisible(false); 							// задаем значение свойства отображения объекта comboBox = невидимый
+                   comboBox1.setVisible(false); 							// задаем значение свойства отображения объекта comboBox1 = невидимый
+                   comboBox2.setVisible(false); 							// задаем значение свойства отображения объекта comboBox2 = невидимый
+                   comboBox3.setVisible(false); 							// задаем значение свойства отображения объекта comboBox3 = невидимый
+                   comboBox4.setVisible(false); 							// задаем значение свойства отображения объекта comboBox4 = невидимый
+                   Button1.setVisible(false); 								// задаем значение свойства отображения объекта Button1 = невидимый
+                   rubl1.setVisible(false); 								// задаем значение свойства отображения объекта rubl1 = невидимый
+                   Button2.setVisible(true); 								// задаем значение свойства отображения объекта Button2 = видимый
+                   log6.setVisible(true); 									// задаем значение свойства отображения объекта log6 = видимый
+                   log7.setVisible(true); 									// задаем значение свойства отображения объекта log7 = видимый
+                   log8.setVisible(true); 									// задаем значение свойства отображения объекта log8 = видимый
+                   text2.setVisible(true);									// задаем значение свойства отображения объекта text2 = видимый
+                   text3.setVisible(true);									// задаем значение свойства отображения объекта text3 = видимый
+                   text4.setVisible(true);									// задаем значение свойства отображения объекта text4 = видимый
+                   rubl2.setVisible(true);									// задаем значение свойства отображения объекта rubl2 = видимый
+                   rubl3.setVisible(true);									// задаем значение свойства отображения объекта rubl3 = видимый
+                   rubl4.setVisible(true);									// задаем значение свойства отображения объекта rubl4 = видимый
+                   Button2.setEnabled(true);								// перевод объекта Button2 в доступное состояние (для нажатия) методом setEnabled
+                   comboBox1.setEnabled(false);							// перевод объекта  comboBox1 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox2.setEnabled(false);							// перевод объекта  comboBox2 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox3.setEnabled(false);							// перевод объекта  comboBox3 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox4.setEnabled(false);							// перевод объекта  comboBox4 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox.setEnabled(false);								// перевод объекта  comboBox в недоступное состояние (для нажатия) методом setEnabled
+                   text1.setEnabled(false);								// перевод объекта  text1 в недоступное состояние (для нажатия) методом setEnabled
+                }															// конец выполнения действий оператора try
+            catch ( NumberFormatException error ) {						// перехват исключения оператором catch
+                   result.setText("Проверьте введённые данные"); 			// вывод текста "Проверьте введённые данные" в поле  result, через метод setText
+                   result.setForeground(Color.RED);						// установка цвета текста Jlabel result
+             }																// конец выполнения действий при перехвате исключения оператором catch
+            }																// конец метода actionPerformed    
+        };																	// конец работы слушателя bnds2       
+       final ActionListener snds1 = new ActionListener() {					// объявление слушателя snds1 (обработку события нажатия на кнопку)
+           @Override														// добавление аннотации Override
+            public void actionPerformed(ActionEvent calc) {				// объявление метода actionPerformed	
+                try {														// объявление оператора try (попытка выполнить действия)
+                   double cost4 = Double.parseDouble(text1.getText());		// определение типа(Double) переменной(cost4) методом parseDouble,присваиваение переменной cost4 введенного значения из text1
+                   double nds4 = cost4-cost4/1.1;							// определение типа переменной(nds4), присваиваение nds4 значение выражения
+                   double summas4 = cost4;									// определение типа переменной(summas4), присваиваение summas4 значение выражения
+                   double summabez4 = cost4/1.1; 							// определение типа переменной(summabez4), присваиваение summabez4 значение выражения
+                   NumberFormat na = NumberFormat.getInstance();			// присвоение класса NumberFormat переменной na методом getInstance
+                   na.setMaximumFractionDigits(2); 						// ограничение количества цифр после запятой до 2-ух
+                   text2.setText(""+na.format(summas4));					// вывод значения summas4 в поле text2, используя метод setText и ограничение количества цифр после запятой методом format
+                   text3.setText(""+na.format(summabez4));					// вывод значения summabez4 в поле text3, используя метод setText и ограничение количества цифр после запятой методом format
+                   text4.setText(""+na.format(nds4));						// вывод значения nds4 в поле text4, используя метод setText и ограничение количества цифр после запятой методом format
+                   result.setText("");										// вывод текста "" в поле  result, используя метод setText
+                   log11.setVisible(false);								// задаем значение свойства отображения объекта log11 = невидимый
+                   log1.setVisible(false);									// задаем значение свойства отображения объекта log1 = невидимый
+                   log2.setVisible(false);									// задаем значение свойства отображения объекта log2 = невидимый
+                   log3.setVisible(false);									// задаем значение свойства отображения объекта log3 = невидимый
+                   log4.setVisible(false);									// задаем значение свойства отображения объекта log4 = невидимый
+                   log5.setVisible(false);									// задаем значение свойства отображения объекта log5 = невидимый
+                   text1.setVisible(false);								// задаем значение свойства отображения объекта text1 = невидимый
+                   comboBox.setVisible(false);								// задаем значение свойства отображения объекта comboBox = невидимый
+                   comboBox1.setVisible(false);							// задаем значение свойства отображения объекта comboBox1 = невидимый
+                   comboBox2.setVisible(false);							// задаем значение свойства отображения объекта comboBox2 = невидимый
+                   comboBox3.setVisible(false);							// задаем значение свойства отображения объекта comboBox3 = невидимый
+                   comboBox4.setVisible(false);							// задаем значение свойства отображения объекта comboBox4 = невидимый
+                   Button1.setVisible(false);								// задаем значение свойства отображения объекта Button1 = невидимый
+                   rubl1.setVisible(false);								// задаем значение свойства отображения объекта rubl1 = невидимый
+                   Button2.setVisible(true);								// задаем значение свойства отображения объекта Button2 = видимый
+                   log6.setVisible(true);									// задаем значение свойства отображения объекта log6 = видимый
+                   log7.setVisible(true);									// задаем значение свойства отображения объекта log7 = видимый
+                   log8.setVisible(true);									// задаем значение свойства отображения объекта log8 = видимый
+                   text2.setVisible(true);									// задаем значение свойства отображения объекта text2 = видимый
+                   text3.setVisible(true);									// задаем значение свойства отображения объекта text3 = видимый
+                   text4.setVisible(true);									// задаем значение свойства отображения объекта text4 = видимый
+                   rubl2.setVisible(true);									// задаем значение свойства отображения объекта rubl2 = видимый
+                   rubl3.setVisible(true);									// задаем значение свойства отображения объекта rubl3 = видимый
+                   rubl4.setVisible(true);									// задаем значение свойства отображения объекта rubl4 = видимый
+                   Button2.setEnabled(true);								// перевод объекта Button2 в доступное состояние (для нажатия) методом setEnabled
+                   comboBox1.setEnabled(false);							// перевод объекта comboBox1 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox2.setEnabled(false);							// перевод объекта comboBox2 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox3.setEnabled(false);							// перевод объекта comboBox3 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox4.setEnabled(false);							// перевод объекта comboBox4 в недоступное состояние (для нажатия) методом setEnabled
+                   comboBox.setEnabled(false);								// перевод объекта comboBox в недоступное состояние (для нажатия) методом setEnabled
+                   text1.setEnabled(false);								// перевод объекта text1 в недоступное состояние (для нажатия) методом setEnabled
+                }															// конец выполнения действий оператора try
+            catch ( NumberFormatException error ) {						// перехват исключения оператором catch		
+                   result.setText("Проверьте введённые данные");			// вывод текста "Проверьте введённые данные" в поле  result, через метод setText
+                   result.setForeground(Color.RED);						// установка цвета текста Jlabel result методом setForeground
+             }																// конец выполнения действий при перехвате исключения оператором catch
+            }																// конец метода actionPerformed    
+        };																	// конец работы слушателя snds1        
+        final ActionListener snds = new ActionListener() {					// объявление слушателя snds (обработку события нажатия на кнопку)
+             @Override														// добавляем аннотации Override
+              public void actionPerformed(ActionEvent calc) {				// объявление метода actionPerformed
+                  try {													// объявление оператора try (попытка выполнить действия)
+                     double cost = Double.parseDouble(text1.getText());	// определение типа(Double) переменной(cost) методом parseDouble, присваиваение переменной cost введенного значения из text1
+                     double nds = cost-cost/1.18;							// определение типа переменной(nds), присваиваение nds значения выражения
+                     double summas = cost;									// определение типа переменной(summas), присваиваение (summas значения выражения		
+                     double summabez = cost/1.18; 							// определение типа переменной(summabez), присваиваение summabez значения выражения
+                     NumberFormat na = NumberFormat.getInstance();			// присвоение класса NumberFormat переменной na методом getInstance
+                     na.setMaximumFractionDigits(2);  						// ограничение количества цифр после запятой до 2-ух
+                     text2.setText(""+na.format(summas));					// вывод значения summas в поле text2, используя метод setText и ограничение количества цифр после запятой методом format
+                     text3.setText(""+na.format(summabez));				// вывод значения summabez в поле text2, используя метод setText и ограничение количества цифр после запятой методом format
+                     text4.setText(""+na.format(nds));						// вывод значения nds в поле text2, используя метод setText и ограничение количества цифр после запятой методом format
+                     result.setText("");									// вывод текстf "" в поле  result, используя метод setText
+                     log11.setVisible(false);							 	// задаем значение свойства отображения объекта log11 = невидимый
+                     log1.setVisible(false);							 	// задаем значение свойства отображения объекта log1 = невидимый
+                     log2.setVisible(false);							 	// задаем значение свойства отображения объекта log2 = невидимый
+                     log3.setVisible(false);							 	// задаем значение свойства отображения объекта log3 = невидимый
+                     log4.setVisible(false);							 	// задаем значение свойства отображения объекта log4 = невидимый
+                     log5.setVisible(false);							 	// задаем значение свойства отображения объекта log5 = невидимый
+                     text1.setVisible(false);							 	// задаем значение свойства отображения объекта text1 = невидимый
+                     comboBox.setVisible(false);						    // задаем значение свойства отображения объекта comboBox = невидимый
+                     comboBox1.setVisible(false);						    // задаем значение свойства отображения объекта comboBox1 = невидимый
+                     comboBox2.setVisible(false);						    // задаем значение свойства отображения объекта comboBox2 = невидимый
+                     comboBox3.setVisible(false);						    // задаем значение свойства отображения объекта comboBox3 = невидимый
+                     comboBox4.setVisible(false);						    // задаем значение свойства отображения объекта comboBox4 = невидимый
+                     Button1.setVisible(false); 						    // задаем значение свойства отображения объекта Button1 = невидимый
+                     rubl1.setVisible(false); 						   		// задаем значение свойства отображения объекта rubl1 = невидимый
+                     Button2.setVisible(true); 						   	// задаем значение свойства отображения объекта Button2 = видимый
+                     log6.setVisible(true); 						   		// задаем значение свойства отображения объекта log6 = видимый
+                     log7.setVisible(true); 						   		// задаем значение свойства отображения объекта log7 = видимый
+                     log8.setVisible(true); 						   		// задаем значение свойства отображения объекта log8 = видимый
+                     text2.setVisible(true); 						   		// задаем значение свойства отображения объекта text2 = видимый
+                     text3.setVisible(true); 						   		// задаем значение свойства отображения объекта text3 = видимый
+                     text4.setVisible(true); 						   		// задаем значение свойства отображения объекта text4 = видимый
+                     rubl2.setVisible(true); 						   		// задаем значение свойства отображения объекта rubl2 = видимый
+                     rubl3.setVisible(true); 						   		// задаем значение свойства отображения объекта rubl3 = видимый
+                     rubl4.setVisible(true); 						   		// задаем значение свойства отображения объекта rubl4 = видимый
+                     Button2.setEnabled(true);								// перевод объекта Button2 в доступное состояние(для нажатия) методом setEnabled
+                     comboBox1.setEnabled(false);							// перевод объекта comboBox1 в не доступное состояние (для нажатия) методом setEnabled
+                     comboBox2.setEnabled(false);							// перевод объекта comboBox2 в не доступное состояние (для нажатия) методом setEnabled
+                     comboBox3.setEnabled(false);							// перевод объекта comboBox3 в не доступное состояние (для нажатия) методом setEnabled
+                     comboBox4.setEnabled(false);							// перевод объекта comboBox4 в не доступное состояние (для нажатия) методом setEnabled
+                     comboBox.setEnabled(false);							// перевод объекта comboBox в не доступное состояние (для нажатия) методом setEnabled
+                     text1.setEnabled(false);								// перевод объекта text1 в не доступное состояние (для нажатия) методом setEnabled
+                  }														// конец выполнения действий оператора try
+              catch ( NumberFormatException error ) {						// перехват исключения оператором catch
+                     result.setText("Проверьте введённые данные"); 		// вывод текста "Проверьте введённые данные" в поле  result, через метод setText
+                     result.setForeground(Color.RED);						// установка цвета текста Jlabel result методом setForeground
+               }															// конец выполнения действий при перехвате исключения оператором catch
+              }															// конец метода actionPerformed    
+          };																// конец работы слушателя snds
