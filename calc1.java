@@ -600,3 +600,210 @@ Color button = new Color(255, 229, 180);									// присвоение переменной button
                           	 Button1.removeActionListener(snds1); 		// прекращение прослушивания кнопки Button1 слушателем snds1
                           	 Button1.removeActionListener(bnds1); 		// прекращение прослушивания кнопки Button1 слушателем bnds2
                            }												// конец выполнения действий при выполнении условия оператора if   
+                           else if(item == "Отсутствует"){	 			// проверка выполнения логического выражения оператором else if
+                            	 comboBox4.setEnabled(true);				// перевод объекта comboBox4 в доступное состояние (для нажатия) методом setEnabled
+                           	 Button1.removeActionListener(bnds); 		// присваиваение объекту Button1 слушателя bnds
+                           	 Button1.removeActionListener(bnds1); 		// прекращение прослушивания кнопки Button1 слушателем bnds1                            	
+                           	 Button1.removeActionListener(snds); 		// прекращение прослушивания кнопки Button1 слушателем snds
+                           	 Button1.removeActionListener(snds1); 		// прекращение прослушивания кнопки Button1 слушателем snds1
+                           	 Button1.removeActionListener(bnds2); 		// прекращение прослушивания кнопки Button1 слушателем bnds2
+                            }												// конец выполнения действий при выполнении условия оператора else if
+                            else if(item == ""){ 							// проверка выполнения логического выражения оператором else if
+                            	 comboBox4.setEnabled(false);				// перевод объекта comboBox4 в недоступное состояние (для нажатия) методом setEnabled
+                               comboBox4.setSelectedItem("");				// присвоение объекту comboBox4 значения равного пустому полю
+                           	 Button1.removeActionListener(bnds); 		// прекращение прослушивания кнопки Button1 слушателем bnds
+                           	 Button1.removeActionListener(bnds1); 		// прекращение прослушивания кнопки Button1 слушателем bnds1                            	
+                           	 Button1.removeActionListener(snds); 		// прекращение прослушивания кнопки Button1 слушателем snds
+                           	 Button1.removeActionListener(snds1); 		// прекращение прослушивания кнопки Button1 слушателем snds1
+                           	 Button1.removeActionListener(bnds2); 		// прекращение прослушивания кнопки Button1 слушателем bnds2
+                            };											// конец выполнения действий при выполнении условия оператора else if                                 
+                   }														// конец метода actionPerformed    
+               };															// конец работы слушателя combobx  
+         	  final ActionListener combo1 = new ActionListener() {			// объявление слушателя combo1 (обработку события выбора из списка)
+                public void actionPerformed(ActionEvent a2) {  			// объявление метода actionPerformed
+                    JComboBox box = (JComboBox)a2.getSource(); 			// присвоение переменной box значения JComboBox
+                            String item = (String)box.getSelectedItem();  // присвоение переменной item значения box	
+                            if(item == "Местная"){ 						// проверка выполнения логического выражения оператором if
+                            comboBox3.setEnabled(false); 					// перевод объекта comboBox3 в недоступное состояние (для нажатия) методом setEnabled 	
+                            comboBox3.setSelectedItem("");				// присвоение объекту comboBox3 значения равного пустому полю
+                            comboBox4.setEnabled(true);					// перевод объекта comboBox4 в доступное состояние (для нажатия) методом setEnabled
+                            }												// конец выполнения действий при выполнении условия оператора if   
+                            else if(item == "Экспорт"){	 				// проверка выполнения логического выражения оператором else if
+                            comboBox4.setSelectedItem("");				// присвоение объекту comboBox4 значения равного пустому полю
+                            comboBox3.setEnabled(true);					// перевод объекта comboBox3 в доступное состояние (для нажатия) методом setEnabled
+                            comboBox4.setEnabled(false);					// перевод объекта comboBox4 в недоступное состояние (для нажатия) методом setEnabled 	
+                            }												// конец выполнения действий при выполнении условия оператора else if
+                            else if(item == ""){ 							// проверка выполнения логического выражения оператором else if
+                            comboBox3.setEnabled(false); 					// перевод объекта comboBox3 в недоступное состояние (для нажатия) методом setEnabled 	 	
+                            comboBox3.setSelectedItem("");				// присвоение объекту comboBox3 значения равного пустому полю
+                            };											// конец выполнения действий при выполнении условия оператора else if                                 
+                   }														// конец метода actionPerformed    
+               };															// конец работы слушателя combo1  	                
+comboBox1.addActionListener(combo);											// присваиваение объекту comboBox1 слушателя combo
+comboBox2.addActionListener(combo1);										// присваиваение объекту comboBox2 слушателя combo1
+comboBox3.addActionListener(combobx);										// присваиваение объекту comboBox3 слушателя combobx
+Button2.addActionListener(again); 											// присваиваение объекту Button2 слушателя again
+      {																	// открывающий символ
+      GridBagLayout layout = new GridBagLayout(); 						// добавление менеджера размещения компонентов layout
+      GridBagConstraints constraints = new GridBagConstraints();			// добавление объекта класса GridBagConstraints, хранящий правила размещения компонентов       
+      constraints.weightx = 1.0;											// пропорциональное растяжение компонентов 	при изменении размера контейнера
+      constraints.weighty = 1.0;											// пропорциональное растяжение компонентов 	при изменении размера контейнера
+      constraints.insets = new Insets(25, 50, 5, 5);						// установление полей в контейнере (сверху, слева, снизу, справа)
+      constraints.gridx = 0;												// ограничения по столбцу = 0
+      constraints.gridy = 0;												// ограничения по строке = 0
+      layout.setConstraints(log, constraints);							// Установление ограничений: log - объект изменений, constraints - конкретные ограничения
+      constraints.insets = new Insets(20, 15, 5, 5);						// установление полей в контейнере (сверху, слева, снизу, справа)
+      constraints.anchor = GridBagConstraints.WEST;						// направление размещения компонента (West)
+      constraints.gridy = 2;												// ограничения по строке = 2
+      layout.setConstraints(log11, constraints);							// Установление ограничений: log11 - объект изменений, constraints - конкретные ограничения
+      constraints.insets = new Insets(5, 15, 5, 5);						// установление полей в контейнере (сверху, слева, снизу, справа)
+      constraints.anchor = GridBagConstraints.WEST;						// направление размещения компонента (West)
+      constraints.gridy = 4;												// ограничения по строке = 4
+      layout.setConstraints(log1, constraints);							// Установление ограничений: log1 - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 0;												// ограничения по столбцу = 0
+      constraints.gridy = 7;												// ограничения по строке = 7
+      layout.setConstraints(log2, constraints);							// Установление ограничений: log2 - объект изменений, constraints - конкретные ограничения     
+      constraints.insets = new Insets(5, 35, 5, 5); 						// установление полей в контейнере (сверху, слева, снизу, справа)       
+      constraints.gridy = 16;												// ограничения по столбцу = 16
+      constraints.ipadx = 5;												// добавляет к ширине компонента 5 пикселей
+      constraints.gridx = 0;												// ограничения по строке = 0
+      layout.setConstraints(comboBox, constraints);						// Установление ограничений: comboBox - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 169;											// добавляет к ширине компонента 169 пикселей
+      constraints.gridy = 9;												// ограничения по столбцу = 9
+      layout.setConstraints(comboBox2, constraints);						// Установление ограничений: comboBox2 - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 170;											// добавляет к ширине компонента 170 пикселей
+      constraints.gridy = 5;												// ограничения по столбцу = 5
+      layout.setConstraints(comboBox1, constraints);						// Установление ограничений: comboBox1 - объект изменений, constraints - конкретные ограничения   
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 150;											// добавляет к ширине компонента 150 пикселей
+      constraints.gridy = 12;												// ограничения по столбцу = 12
+      layout.setConstraints(comboBox3, constraints);						// Установление ограничений: comboBox3 - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 199;											// добавляет к ширине компонента 199 пикселей
+      constraints.gridy = 14;												// ограничения по столбцу = 14
+      layout.setConstraints(comboBox4, constraints);						// Установление ограничений: comboBox4 - объект изменений, constraints - конкретные ограничения  
+      constraints.insets = new Insets(5, 35, 5, 5); 						// установление полей в контейнере (сверху, слева, снизу, справа) 
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 243;											// добавляет к ширине компонента 243 пикселей
+      constraints.ipady = 5;												// добавляет к высоте компонента 5 пикселей
+      constraints.gridy = 3;												// ограничения по столбцу = 3
+      layout.setConstraints(text1, constraints);							// Установление ограничений: text1 - объект изменений, constraints - конкретные ограничения
+      constraints.insets = new Insets(5, 130, 5, 0); 						// установление полей в контейнере (сверху, слева, снизу, справа)    
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 130;											// добавляет к ширине компонента 130 пикселей
+      constraints.ipady = 5;												// добавляет к высоте компонента 5 пикселей
+      constraints.gridy = 1;												// ограничения по столбцу = 1											
+      layout.setConstraints(text2, constraints);							// Установление ограничений: text2 - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 120;											// добавляет к ширине компонента 120 пикселей
+      constraints.ipady = 5;												// добавляет к высоте компонента 5 пикселей
+      constraints.gridy = 2;												// ограничения по столбцу = 5
+      layout.setConstraints(text3, constraints);							// Установление ограничений: text3 - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.ipadx = 120;											// добавляет к ширине компонента 120 пикселей
+      constraints.ipady = 5;												// добавляет к высоте компонента 5 пикселей
+      constraints.gridy = 3;												// ограничения по столбцу = 3
+      layout.setConstraints(text4, constraints);							// Установление ограничений: text4 - объект изменений, constraints - конкретные ограничения
+      constraints.insets = new Insets(5, 0, 5, 5); 						// установление полей в контейнере (сверху, слева, снизу, справа)    
+      constraints.gridx = 1;												// ограничения по строке = 1
+      constraints.ipadx = 0;												// добавляет к ширине компонента 0 пикселей}
+      constraints.gridy = 3;												// ограничения по столбцу = 3
+      layout.setConstraints(rubl1, constraints);							// Установление ограничений: rubl1 - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 2;												// ограничения по строке = 2
+      constraints.ipadx = 0;												// добавляет к ширине компонента 0 пикселей
+      constraints.gridy = 1;												// ограничения по столбцу = 1
+      layout.setConstraints(rubl2, constraints);							// Установление ограничений: rubl2 - объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 2;												// ограничения по строке = 2
+      constraints.ipadx = 0;												// добавляет к ширине компонента 0 пикселей
+      constraints.gridy = 2;												// ограничения по столбцу = 2
+      layout.setConstraints(rubl3, constraints);							// Установление ограничений: rubl3- объект изменений, constraints - конкретные ограничения
+      constraints.gridx = 2;												// ограничения по строке = 2
+      constraints.ipadx = 0;												// добавляет к ширине компонента 0 пикселей
+      constraints.gridy = 3;												// ограничения по столбцу = 3
+      layout.setConstraints(rubl4, constraints);							// Установление ограничений: rubl4- объект изменений, constraints - конкретные ограничения
+      constraints.insets = new Insets(5, 15, 5, 5); 						// установление полей в контейнере (сверху, слева, снизу, справа)
+      constraints.anchor = GridBagConstraints.WEST;						// установление местонахождения компонента в левом углу
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.gridy = 11;												// ограничения по столбцу = 11
+      layout.setConstraints(log3, constraints);							// Установление ограничений: log3 - объект изменений, constraints - конкретные ограничения
+      constraints.anchor = GridBagConstraints.WEST;						// установление местонахождения компонента в левом углу
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.gridy = 13;												// ограничения по столбцу = 13
+      layout.setConstraints(log4, constraints);							// Установление ограничений: log4 - объект изменений, constraints - конкретные ограничения
+      constraints.anchor = GridBagConstraints.WEST;						// установление местонахождения компонента в левом углу
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.gridy = 15;												// ограничения по столбцу = 15
+      layout.setConstraints(log5, constraints);							// Установление ограничений: log5 - объект изменений, constraints - конкретные ограничения  
+      constraints.insets = new Insets(10, 110, 5, 5); 					// установление полей в контейнере (сверху, слева, снизу, справа)
+      constraints.gridy = 20;												// ограничения по строке = 20
+      constraints.gridx = 0;												// ограничения по столбцу = 0
+      layout.setConstraints(Button1, constraints);						// Установление ограничений: Button1 - объект изменений, constraints - конкретные ограничения
+      constraints.insets = new Insets(10, 100, 5, 5); 					// установление полей в контейнере (сверху, слева, снизу, справа)
+      constraints.gridy = 5;												// ограничения по столбцу = 5
+      constraints.ipadx = 60;												// добавляет к ширине компонента 60 пикселей
+      constraints.gridx = 0;												// ограничения по строке = 0
+      layout.setConstraints(Button2, constraints);						// Установление ограничений: Button2 - объект изменений, constraints - конкретные ограничения     
+      constraints.insets = new Insets(5, 15, 5, 0); 						// установление полей в контейнере (сверху, слева, снизу, справа)
+      constraints.anchor = GridBagConstraints.WEST;						// установление местонахождения компонента в левом углу
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.gridy = 1;												// ограничения по столбцу = 1
+      layout.setConstraints(log6, constraints);							// Установление ограничений: log6 - объект изменений, constraints - конкретные ограничения
+      constraints.anchor = GridBagConstraints.WEST;						// установление местонахождения компонента в левом углу
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.gridy = 2;												// ограничения по столбцу = 2   
+      layout.setConstraints(log7, constraints);							// Установление ограничений: log7- объект изменений, constraints - конкретные ограничения
+      constraints.anchor = GridBagConstraints.WEST;						// установление местонахождения компонента в левом углу
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.gridy = 3;												// ограничения по столбцу = 3        
+      layout.setConstraints(log8, constraints);							// Установление ограничений: log8 - объект изменений, constraints - конкретные ограничения 
+      constraints.gridx = 0;												// ограничения по строке = 0
+      constraints.gridy = 22;												// ограничения по столбцу = 22         
+      constraints.fill = GridBagConstraints.HORIZONTAL;					// горизонтальное отображение объекта без изменения его ширины
+      constraints.anchor = GridBagConstraints.WEST;						// установление местонахождения компонента в левом углу
+      layout.setConstraints(result, constraints);							// Установление ограничений: - объект изменений, constraints - конкретные ограничения
+      mainFrame = new JFrame("Расчет НДС");								// создание окна программы с заголовком "Расчет НДС"
+      mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);			// закрытие программы при нажатии на крестик
+      mainFrame.setLayout(layout);										// установка способа отображения элементов
+      mainFrame.add(log);													// добавление элементa log на форму
+      mainFrame.add(log11);												// добавление элементa log11 на форму
+      mainFrame.add(log1);												// добавление элементa log11 на форму
+      mainFrame.add(log2);												// добавление элемента log2 на форму
+      mainFrame.add(log3);												// добавление элемента log3 на форму
+      mainFrame.add(log4);												// добавление элемента log4 на форму
+      mainFrame.add(log5);												// добавление элемента log5 на форму
+      mainFrame.add(log6);												// добавление элемента log6 на форму
+      mainFrame.add(log7);												// добавление элемента log7 на форму
+      mainFrame.add(log8);												// добавление элемента log8 на форму
+      mainFrame.add(text1);												// добавление элемента text1 на форму
+      mainFrame.add(text2);												// добавление элемента text2 на форму
+      mainFrame.add(text3);												// добавление элемента text3 на форму
+      mainFrame.add(text4);												// добавление элемента text4 на форму
+      mainFrame.add(rubl1);												// добавление элемента rubl1 на форму
+      mainFrame.add(rubl2);												// добавление элемента rubl2 на форму
+      mainFrame.add(rubl3);												// добавление элемента rubl3 на форму
+      mainFrame.add(rubl4);												// добавление элемента rubl4 на форму
+      mainFrame.add(comboBox2);											// добавление элемента comboBox2 на форму
+      mainFrame.add(comboBox1);											// добавление элемента comboBox1 на форму
+      mainFrame.add(comboBox3);											// добавление элемента comboBox3 на форму
+      mainFrame.add(comboBox4);											// добавление элемента comboBox4 на форму
+      mainFrame.add(Button1);												// добавление элемента Button1 на форму
+      mainFrame.add(Button2);												// добавление элемента Button2 на форму
+      mainFrame.add(comboBox);											// добавление элемента comboBox на форму
+      mainFrame.add(result);												// добавление элемента result на форму
+      mainFrame.pack();													// устанавливаем оптимального размера диалоговых окон методом pack
+      mainFrame.setVisible(true);											// устанавливаем окно видимым методом setVisible
+      mainFrame.setLocationRelativeTo(null);								// устанавливаем окно по центру экрана методом setLocationRelativeT
+      mainFrame.getContentPane().setBackground(back);						// задаем цвет фона формы равный переменной back
+      }																	// закрывающий символ
+  }																		// конец класса calss1
+  public static void main(String[] args) { 								// точка входа в приложение методом main
+  	SwingUtilities.invokeLater(new Runnable() {							// объявление Runnable интерфейса, методом SwingUtilities
+          @Override														// добавляем аннотацию Override
+          public void run() {												// инициализируем и запускаем приложение
+              new nds();													// создаем экземпляр приложения
+          }																// закрывающий символ
+      });																	// закрывающий символ
+  }																		// закрывающий символ
+}																			// закрывающий символ
